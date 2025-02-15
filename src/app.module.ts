@@ -18,6 +18,9 @@ import { UserModule } from "./routes/Users/user.module";
       entities: [`${__dirname}/**/*.entity{.js,.ts}`],
       migrations: [`${__dirname}/routes/**/migrations/*{.ts,.js}`],
       migrationsRun: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     UserModule,
   ],
