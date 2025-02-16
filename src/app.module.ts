@@ -2,6 +2,8 @@ import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { UserModule } from "./routes/Users/user.module";
+import { ProjectModule } from "./routes/Projects/projects.module";
+import { MountingModule } from "./routes/Mounting/mounting.module";
 
 @Module({
   imports: [
@@ -23,6 +25,8 @@ import { UserModule } from "./routes/Users/user.module";
       },
     }),
     UserModule,
+    ProjectModule,
+    MountingModule,
   ],
   controllers: [],
   providers: [],

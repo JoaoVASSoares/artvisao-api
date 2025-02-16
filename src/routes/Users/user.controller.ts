@@ -2,10 +2,10 @@ import { ApiBadRequestResponse, ApiOperation, ApiResponse, ApiTags } from "@nest
 import { UserService } from "./user.service";
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Post, Put, UsePipes, ValidationPipe } from "@nestjs/common";
 import { UserCreateDto } from "./dtos/userCreate.dto";
-import { User } from "./entity/user.entity";
 import { DefaultErrorResponse } from "src/core/responses/DefaultResponse";
 import { UserResponse } from "./dtos/userReponse.dto";
 import { UserUpdatedDto } from "./dtos/userUpdate.dto";
+import { User } from "./entity/users.entity";
 
 @ApiTags("User")
 @Controller("api/user")
