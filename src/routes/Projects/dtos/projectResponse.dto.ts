@@ -18,6 +18,9 @@ export class ProjectResponse {
   dateProjectEnd: string;
 
   @ApiProperty()
+  description: string;
+
+  @ApiProperty()
   updatedAt: Date;
 
   @ApiProperty()
@@ -38,6 +41,9 @@ export class ProjectResponseMounting {
   dateProjectEnd: string;
 
   @ApiProperty()
+  description: string;
+
+  @ApiProperty()
   updatedAt: Date;
 
   @ApiProperty()
@@ -56,6 +62,9 @@ export class ProjectResponseGet {
 
   @ApiProperty()
   dateProjectEnd: string;
+
+  @ApiProperty()
+  description: string;
 
   @ApiProperty()
   user: UserResponse;

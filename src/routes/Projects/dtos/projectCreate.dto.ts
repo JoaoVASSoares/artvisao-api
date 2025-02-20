@@ -1,6 +1,6 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
 import { Transform } from "class-transformer";
-import { IsNotEmpty, IsString, Matches } from "class-validator";
+import { IsNotEmpty, IsOptional, IsString, Matches, MaxLength } from "class-validator";
 
 export class ProjectCreateDto {
   @ApiProperty({ description: "Nome do projeto", format: "string", type: "string" })
@@ -39,4 +39,11 @@ export class ProjectCreateDto {
   })
   @Transform(({ value }) => value?.trim())
   dateProjectEnd: string;
+
+  @ApiPropertyOptional({ description: "Descrição do projeto" })
+  @IsString()
+  @IsOptional()
+  @MaxLength(1000)
+  @Transform(({ value }) => value?.trim())
+  description: string;
 }

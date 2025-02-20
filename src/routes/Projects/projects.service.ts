@@ -31,6 +31,7 @@ export class ProjectService {
         userId: true,
         dateProjectStart: true,
         dateProjectEnd: true,
+        description: true,
         user: {
           name: true,
           email: true,
@@ -62,6 +63,7 @@ export class ProjectService {
         userId: true,
         dateProjectStart: true,
         dateProjectEnd: true,
+        description: true,
         user: {
           name: true,
           email: true,

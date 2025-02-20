@@ -25,6 +25,9 @@ export class Project {
   @Column({ name: "project_end", nullable: false, type: "date" })
   dateProjectEnd: string;
 
+  @Column({ name: "description", nullable: true, type: "text" })
+  description: string;
+
   @CreateDateColumn({ name: "created_at", type: "timestamp" })
   createdAt: Date;
 
